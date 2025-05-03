@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/DotnetMCPServer/DotnetMCPServer.csproj" Id="ed71f49b-3758-4354-8c6a-cfc01b970e1d" />
+  <Project Path="src/Livraria.Api/Livraria.Api.csproj" Id="0f367444-2122-44bc-8e6a-61b2cd2325b2" />
+</Solution>

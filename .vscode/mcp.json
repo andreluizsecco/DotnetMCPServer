@@ -1,0 +1,26 @@
+{
+    "servers": {
+        "dotnet-mcpserver-local": {
+            "type": "stdio",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "D:\\Projects\\GitHub\\DotnetMCPServer\\src\\DotnetMCPServer\\DotnetMCPServer.csproj"
+            ]
+        },
+        "dotnet-mcpserver-docker": {
+            "type": "stdio",
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "API_BASE_ADDRESS=http://host.docker.internal:5094/api/",
+                "andreluizsecco/dotnet-mcpserver"
+            ],
+            "env": {}
+        }
+    }
+}
