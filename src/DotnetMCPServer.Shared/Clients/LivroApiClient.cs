@@ -1,8 +1,8 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
-using DotnetMCPServer.DTOs;
+using DotnetMCPServer.Shared.DTOs;
 
-namespace DotnetMCPServer.Clients
+namespace DotnetMCPServer.Shared.Clients
 {
     public class LivroApiClient
     {

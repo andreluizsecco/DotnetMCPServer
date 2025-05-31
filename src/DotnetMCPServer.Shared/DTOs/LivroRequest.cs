@@ -1,4 +1,4 @@
-﻿namespace DotnetMCPServer.DTOs
+﻿namespace DotnetMCPServer.Shared.DTOs
 {
     public class LivroRequest
     {

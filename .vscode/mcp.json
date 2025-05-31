@@ -21,6 +21,13 @@
                 "andreluizsecco/dotnet-mcpserver"
             ],
             "env": {}
+        },
+      "dotnet-mcpserver-sse": {
+        "type": "sse",
+        "url": "http://localhost:5010/sse",
+        "headers": {
+          "X-API-KEY": "bda42d0d-64e4-4790-b2a8-40d073dafb16"
         }
+      }
     }
 }

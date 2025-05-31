@@ -1,28 +1,17 @@
-﻿using DotnetMCPServer.Shared.Clients;
+using DotnetMCPServer.Shared.Clients;
 using DotnetMCPServer.Shared.Tools;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using DotnetMCPServerSSE.Middlewares;
 using ModelContextProtocol.Protocol;
 
-var builder = Host.CreateApplicationBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole(options =>
-{
-    options.LogToStandardErrorThreshold = LogLevel.Debug;
-});
-
-builder.Configuration.AddEnvironmentVariables();
-
-var serverInfo = new Implementation { Name = "DotnetMCPServer", Version = "1.0.0" };
+var serverInfo = new Implementation { Name = "DotnetMCPServerSSE", Version = "1.0.0" };
 builder.Services
     .AddMcpServer(mcp =>
     {
         mcp.ServerInfo = serverInfo;
     })
-    .WithStdioServerTransport()
+    .WithHttpTransport()
     .WithToolsFromAssembly(typeof(LivrariaTools).Assembly);
 
 builder.Services.AddHttpClient<LivroApiClient>(client =>
@@ -35,4 +24,9 @@ builder.Services.AddHttpClient<LivroApiClient>(client =>
 });
 
 var app = builder.Build();
+
+app.UseMiddleware<ApiKeyMiddleware>();
+
+app.MapMcp();
+
 await app.RunAsync();

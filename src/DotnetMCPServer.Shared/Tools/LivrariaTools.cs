@@ -1,10 +1,10 @@
-﻿using DotnetMCPServer.Clients;
-using DotnetMCPServer.DTOs;
+﻿using DotnetMCPServer.Shared.Clients;
+using DotnetMCPServer.Shared.DTOs;
 using ModelContextProtocol.Server;
 using System.ComponentModel;
 using System.Text.Json;
 
-namespace DotnetMCPServer.Tools
+namespace DotnetMCPServer.Shared.Tools
 {
     [McpServerToolType]
     public static class LivrariaTools
