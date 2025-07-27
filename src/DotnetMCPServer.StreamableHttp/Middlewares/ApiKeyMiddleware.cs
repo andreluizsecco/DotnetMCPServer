@@ -1,4 +1,4 @@
-﻿namespace DotnetMCPServerSSE.Middlewares
+﻿namespace DotnetMCPServer.StreamableHttp.Middlewares
 {
     public class ApiKeyMiddleware
     {

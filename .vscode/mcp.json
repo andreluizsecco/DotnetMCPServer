@@ -1,33 +1,34 @@
 {
-    "servers": {
-        "dotnet-mcpserver-local": {
-            "type": "stdio",
-            "command": "dotnet",
-            "args": [
-                "run",
-                "--project",
-                "D:\\Projects\\GitHub\\DotnetMCPServer\\src\\DotnetMCPServer\\DotnetMCPServer.csproj"
-            ]
-        },
-        "dotnet-mcpserver-docker": {
-            "type": "stdio",
-            "command": "docker",
-            "args": [
-                "run",
-                "-i",
-                "--rm",
-                "-e",
-                "API_BASE_ADDRESS=http://host.docker.internal:5094/api/",
-                "andreluizsecco/dotnet-mcpserver"
-            ],
-            "env": {}
-        },
-      "dotnet-mcpserver-sse": {
-        "type": "sse",
-        "url": "http://localhost:5010/sse",
-        "headers": {
-          "X-API-KEY": "bda42d0d-64e4-4790-b2a8-40d073dafb16"
-        }
-      }
-    }
+	"servers": {
+		// "dotnet-mcpserver-local": {
+		// 	"type": "stdio",
+		// 	"command": "dotnet",
+		// 	"args": [
+		// 		"run",
+		// 		"--project",
+		// 		"D:\\Projects\\GitHub\\DotnetMCPServer\\src\\DotnetMCPServer\\DotnetMCPServer.csproj"
+		// 	]
+		// },
+		// "dotnet-mcpserver-docker": {
+		// 	"type": "stdio",
+		// 	"command": "docker",
+		// 	"args": [
+		// 		"run",
+		// 		"-i",
+		// 		"--rm",
+		// 		"-e",
+		// 		"API_BASE_ADDRESS=http://host.docker.internal:5094/api/",
+		// 		"andreluizsecco/dotnet-mcpserver"
+		// 	],
+		// 	"env": {}
+		// },
+		"dotnet-mcpserver-http": {
+			"type": "http",
+			"url": "http://localhost:5010",
+			"headers": {
+				"X-API-KEY": "bda42d0d-64e4-4790-b2a8-40d073dafb16"
+			}
+		}
+	},
+	"inputs": []
 }

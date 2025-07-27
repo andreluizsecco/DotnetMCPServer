@@ -1,6 +1,6 @@
 <Solution>
   <Project Path="src/DotnetMCPServer.Shared/DotnetMCPServer.Shared.csproj" Id="a0b7954b-db13-4f71-83f9-0795c95fa9a4" />
-  <Project Path="src/DotnetMCPServer/DotnetMCPServer.csproj" Id="ed71f49b-3758-4354-8c6a-cfc01b970e1d" />
-  <Project Path="src/DotnetMCPServerSSE/DotnetMCPServerSSE.csproj" Id="c88395ed-e49d-421f-84f1-f604ea7481be" />
+  <Project Path="src/DotnetMCPServer/DotnetMCPServer.Stdio.csproj" Id="ed71f49b-3758-4354-8c6a-cfc01b970e1d" />
+  <Project Path="src/DotnetMCPServer.StreamableHttp/DotnetMCPServer.StreamableHttp.csproj" Id="c88395ed-e49d-421f-84f1-f604ea7481be" />
   <Project Path="src/Livraria.Api/Livraria.Api.csproj" Id="0f367444-2122-44bc-8e6a-61b2cd2325b2" />
 </Solution>

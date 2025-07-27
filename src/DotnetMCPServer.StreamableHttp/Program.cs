@@ -1,6 +1,6 @@
 using DotnetMCPServer.Shared.Clients;
 using DotnetMCPServer.Shared.Tools;
-using DotnetMCPServerSSE.Middlewares;
+using DotnetMCPServer.StreamableHttp.Middlewares;
 using ModelContextProtocol.Protocol;
 
 var builder = WebApplication.CreateBuilder(args);
